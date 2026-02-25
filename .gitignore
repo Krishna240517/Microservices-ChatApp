@@ -1,0 +1,9 @@
+/backend/user/.env
+/backend/user/node_modules
+/backend/user/dist
+/backend/mail/.env
+/backend/mail/node_modules
+/backend/mail/dist
+/backend/chat/.env
+/backend/chat/node_modules
+/backend/chat/dist
