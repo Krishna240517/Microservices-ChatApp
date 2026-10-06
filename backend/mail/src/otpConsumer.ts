@@ -7,7 +7,7 @@ export const sendOtpConsumer = async () => {
     try {
         const connection = await amqp.connect({
             protocol:"amqp",
-            port:5672,
+            port: process.env.RABBITMQ_PORT ? parseInt(process.env.RABBITMQ_PORT) : 5672,
             username:process.env.RABBITMQ_USERNAME,
             hostname:process.env.RABBITMQ_HOSTNAME,
             password:process.env.RABBITMQ_PASSWORD
