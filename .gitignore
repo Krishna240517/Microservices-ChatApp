@@ -1,3 +1,5 @@
+/backend/.env
+/backend/node_modules
 /backend/user/.env
 /backend/user/node_modules
 /backend/user/dist
@@ -7,3 +9,6 @@
 /backend/chat/.env
 /backend/chat/node_modules
 /backend/chat/dist
+/frontend/.env
+/frontend/dist
+/frontend/node_modules

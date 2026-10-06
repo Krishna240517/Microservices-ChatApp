@@ -18,15 +18,22 @@ app.use(cookieParser());
 app.use('/api/v1/user', userRoutes);
 connectRabbitMQ();
 connectRedis();
+
 const main = async () => {
     try {
         await connectDB();
-        app.listen(port, () => {
-            console.log(`Server running on port ${port}`);
-        })
+        if (process.env.VERCEL !== "1") {
+            app.listen(port, () => {
+                console.log(`Server running on port ${port}`);
+            });
+        }
     } catch (error) {
         console.error(error);
-        process.exit(1);
+        if (process.env.VERCEL !== "1") {
+            process.exit(1);
+        }
     }
 }
 main();
+
+export default app;
